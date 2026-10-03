@@ -1,13 +1,11 @@
 # Coke_Sales_Analysis
 This project focuses on analyzing Coca-Cola sales data across key American retailers using Excel. The objective is to extract actionable insights from transactional and operational metrics like total sales, units sold, and operating margin. The analysis dives into regional performance, retailer efficiency, and sales trends.
 
-> **Business question:** How can Coca-Cola optimise sales and profitability across U.S. retailers?
-
-An end-to-end Excel analysis of 2021 Coca-Cola beverage sales across four American retailers: data validation, sales and profitability analysis, time-based trends, visualisation, and business recommendations.
+An end-to-end Excel analysis of Coca-Cola beverage sales across four American retailers: data validation, sales and profitability analysis, time-based trends, visualisation, and business recommendations.
 
 ![Dashboard](coke_dashboard.png)
 
-## TL;DR
+## Summary
 
 | | |
 |---|---|
@@ -96,91 +94,6 @@ It answers three questions:
 
 ## 5. Visuals
 
-<table>
-<tr>
-<td><img src="images/01_brand_sales_profit.png" alt="Brand sales and profit"></td>
-<td><img src="images/02_brand_margin.png" alt="Brand margin"></td>
-</tr>
-<tr>
-<td><img src="images/03_monthly_sales_profit.png" alt="Monthly sales and profit"></td>
-<td><img src="images/04_monthly_margin.png" alt="Monthly margin"></td>
-</tr>
-<tr>
-<td><img src="images/08_retailer_sales_margin.png" alt="Retailer comparison"></td>
-<td><img src="images/07_heatmap_region_brand_margin.png" alt="Margin heatmap region x brand"></td>
-</tr>
-<tr>
-<td><img src="images/05_brand_monthly_sales.png" alt="Brand monthly sales"></td>
-<td><img src="images/10_cities_top_bottom_margin.png" alt="City margin extremes"></td>
-</tr>
-</table>
-
-More charts are in [`images/`](images/): profit per unit, region stacked by brand, sales heatmap, and price vs units.
-
-## 6. Recommendations
-
-| # | Action | Why |
-|---|---|---|
-| 1 | Protect and invest in Coca-Cola (shelf space, promotion) | Leads on sales, profit and margin |
-| 2 | Push Dasani in the South and Southeast; fix pricing or cost in the West | 51% vs 27% margin |
-| 3 | Plan inventory and promotions ahead of June and November; run campaigns for Jan-Apr | Peak is ~2.2x the low month |
-| 4 | Review trade terms and costs with FizzySip in the West | Highest price, lowest margin |
-| 5 | Tailor the brand mix by region | Same brand earns very different margins by market |
-| 6 | Investigate Anchorage and Seattle; benchmark Birmingham and Knoxville | ~26% vs 46-51% margin |
-| 7 | Review costs for Diet Coke and Sprite | Lowest profit per unit |
-
-## 7. Limitations
-
-- **One year only:** no year-over-year growth can be measured.
-- **Retailer and region overlap:** BevCo operates only in the South and FizzySip only in the West, so regional gaps partly reflect retailer effects.
-- **No cost, promotion or weather data:** margins are taken as given. The break-even calculator uses a **placeholder $50,000 fixed cost** (editable yellow cell).
-- **Correlation is not causation:** price-volume relationships reflect seasonality and mix.
-
-**Next steps:** add multi-year, cost and promotion data; run controlled price tests; add PivotTables and slicers for interactive exploration.
-
-## 8. Repository Structure
-
-```
-coke-sales-analysis/
-├── README.md
-├── data/
-│   └── Coke-sales-analysis.xlsx             # original source data
-├── workbook/
-│   └── Coke-Sales-Analysis-Completed.xlsx   # full analysis workbook
-├── docs/
-│   └── Coke-Sales-Demo-Script.md            # video demo script
-└── images/                                  # charts used in this README
-```
-
-**Workbook sheets**
-
-| Sheet | Contents |
-|---|---|
-| Summary | KPIs, insights, recommended actions |
-| Data_Prep | Structure, cleaning steps, quality checks |
-| Brand_Analysis | Brand scorecard and charts |
-| Retailer_Region | Retailer/region tables, heatmaps, stacked bar |
-| Geography, Cities | State and city performance, top/bottom cities |
-| Monthly_Trends | Monthly/quarterly trends, seasonality, brand x month heatmap, margin stability |
-| Price_Volume | Price bands, correlations, break-even calculator |
-| Data | Original data |
-
-## 9. How to Use
-
-```bash
-git clone https://github.com/<your-username>/coke-sales-analysis.git
-```
-1. Open `workbook/Coke-Sales-Analysis-Completed.xlsx` in Excel (or LibreOffice).
-2. Start at the **Summary** sheet. Every analysis sheet is formula-driven from `Data`.
-3. For the presentation walkthrough, see `docs/Coke-Sales-Demo-Script.md`.
-
-**Tools:** Microsoft Excel
-
-## Author
-**[Rasika Yadav]**
-
-## Analysis
-
 ### Sales by Retailer
 ![Sales by Retailer](S4_1.png)
 
@@ -204,3 +117,45 @@ git clone https://github.com/<your-username>/coke-sales-analysis.git
 
 ### Operating Margin by Retailer
 ![Operating Margin by Retailer](S4_7.png)
+
+
+## 6. Recommendations
+
+| # | Action | Why |
+|---|---|---|
+| 1 | Protect and invest in Coca-Cola (shelf space, promotion) | Leads on sales, profit and margin |
+| 2 | Push Dasani in the South and Southeast; fix pricing or cost in the West | 51% vs 27% margin |
+| 3 | Plan inventory and promotions ahead of June and November; run campaigns for Jan-Apr | Peak is ~2.2x the low month |
+| 4 | Review trade terms and costs with FizzySip in the West | Highest price, lowest margin |
+| 5 | Tailor the brand mix by region | Same brand earns very different margins by market |
+| 6 | Investigate Anchorage and Seattle; benchmark Birmingham and Knoxville | ~26% vs 46-51% margin |
+| 7 | Review costs for Diet Coke and Sprite | Lowest profit per unit |
+
+## 7. Limitations
+
+- **One year only:** no year-over-year growth can be measured.
+- **Retailer and region overlap:** BevCo operates only in the South and FizzySip only in the West, so regional gaps partly reflect retailer effects.
+- **No cost, promotion or weather data:** margins are taken as given. The break-even calculator uses a **placeholder $50,000 fixed cost** (editable yellow cell).
+- **Correlation is not causation:** price-volume relationships reflect seasonality and mix.
+
+**Next steps:** add multi-year, cost and promotion data; run controlled price tests; add PivotTables and slicers for interactive exploration.
+
+## 8. Workbook sheets
+
+| Sheet | Contents |
+|---|---|
+| Summary | KPIs, insights, recommended actions |
+| Data_Prep | Structure, cleaning steps, quality checks |
+| Brand_Analysis | Brand scorecard and charts |
+| Retailer_Region | Retailer/region tables, heatmaps, stacked bar |
+| Geography, Cities | State and city performance, top/bottom cities |
+| Monthly_Trends | Monthly/quarterly trends, seasonality, brand x month heatmap, margin stability |
+| Price_Volume | Price bands, correlations, break-even calculator |
+| Data | Original data |
+
+
+**Tools:** Microsoft Excel
+
+Author: **[Rasika Yadav]**
+
+
